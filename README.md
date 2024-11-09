@@ -11,6 +11,7 @@ A Python tool for visualizing YOLO format segmentation / bounding box annotation
 - Class label overlay on segments
 - Configurable transparency and visualization parameters
 - Automatic label file detection
+- Selective image visualization from a list
 
 ## Prerequisites
 
@@ -55,6 +56,18 @@ visualizer.visualize_batch(
     labels_dir='path/to/labels',
     num_images=3
 )
+
+# Visualize selected images
+selected_images = [
+    "image1.jpg",
+    "image2.jpg",
+    "image3.jpg"
+]
+
+for img_name in selected_images:
+    image_path = f'path/to/images/{img_name}'
+    label_path = f'path/to/labels/{img_name.split(".")[0]}.txt'
+    visualizer.visualize_single_image(image_path, label_path)
 ```
 
 ### Dataset Structure
@@ -101,6 +114,30 @@ Visualize multiple images with their segmentation masks.
 - `images_dir`: Directory containing images
 - `labels_dir`: Directory containing label files
 - `num_images`: Number of images to visualize (default: 5)
+
+### Example Scripts
+
+#### Visualize Selected Images
+```python
+if __name__ == "__main__":
+    # Initialize visualizer
+    yaml_path = 'path/to/data.yaml'
+    visualizer = YOLOSegmentationVisualizer(yaml_path)
+    
+    # Define list of images to visualize
+    selected_images = [
+        "12Volt_041.jpg",
+        "2008_Dodge_Challenger_27.jpg",
+        "2011_BMW_5-Series_68.jpg",
+        "2011_BMW_5-Series_69.jpg",
+    ]
+
+    # Loop through each image to visualize
+    for img_name in selected_images:
+        image_path = f'path/to/images/{img_name}'
+        label_path = f'path/to/labels/{img_name.split(".")[0]}.txt'
+        visualizer.visualize_single_image(image_path, label_path)
+```
 
 ## Example Output
 
