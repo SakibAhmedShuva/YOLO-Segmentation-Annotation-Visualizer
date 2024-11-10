@@ -30,44 +30,8 @@ Required packages:
 
 Clone the repository:
 ```bash
-git clone https://github.com/yourusername/yolo-segmentation-annotation-visualizer.git
-cd yolo-segmentation-annotation-visualizer
-```
-
-## Usage
-
-### Basic Usage
-
-```python
-from yolo_viz import YOLOSegmentationVisualizer
-
-# Initialize the visualizer with your YAML config
-visualizer = YOLOSegmentationVisualizer('path/to/data.yaml')
-
-# Visualize a single image
-visualizer.visualize_single_image(
-    image_path='path/to/image.jpg',
-    label_path='path/to/label.txt'
-)
-
-# Visualize multiple images
-visualizer.visualize_batch(
-    images_dir='path/to/images',
-    labels_dir='path/to/labels',
-    num_images=3
-)
-
-# Visualize selected images
-selected_images = [
-    "image1.jpg",
-    "image2.jpg",
-    "image3.jpg"
-]
-
-for img_name in selected_images:
-    image_path = f'path/to/images/{img_name}'
-    label_path = f'path/to/labels/{img_name.split(".")[0]}.txt'
-    visualizer.visualize_single_image(image_path, label_path)
+git clone https://github.com/SakibAhmedShuva/YOLO-Segmentation-Annotation-Visualizer.git
+cd YOLO-Segmentation-Annotation-Visualizer
 ```
 
 ### Dataset Structure
