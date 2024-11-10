@@ -1,6 +1,6 @@
 # YOLO Segmentation Annotation Visualizer
 
-A Python tool for visualizing YOLO format segmentation / bounding box annotations. This tool helps in validating and visualizing segmentation masks from YOLO formatted datasets, making it easier to verify annotations and debug segmentation models.
+A Python tool for visualizing YOLOv8/YOLOv11 format segmentation / bounding box annotations. This tool helps in validating and visualizing segmentation masks from YOLO formatted datasets, making it easier to verify annotations and debug segmentation models.
 
 ## Features
 
